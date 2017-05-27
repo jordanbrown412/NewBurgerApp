@@ -51,7 +51,7 @@ router.put("/burgers/update", function(req, res) {
   },
     {
       where: {
-        id: req.params.burger_id
+        id: req.params.id
       }
     }).then(function(){
         res.redirect('/')
