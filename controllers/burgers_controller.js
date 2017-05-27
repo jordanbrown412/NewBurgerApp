@@ -13,6 +13,7 @@ router.get("/burgers", function(req, res) {
       var hbs = {
         burgers: data
       };
+      // console.log(data);
     res.render("index", hbs);
   });
   });
@@ -51,9 +52,10 @@ router.put("/burgers/update", function(req, res) {
   },
     {
       where: {
-        id: req.params.id
+        id: req.body.burger_id
       }
     }).then(function(){
+       console.log(req);
         res.redirect('/')
     });
   });
